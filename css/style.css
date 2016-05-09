@@ -1,0 +1,177 @@
+@charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=Abel);
+/* Base
+------------------------------------------------------------*/
+html {
+  font-size: 62.5%;
+  height: 100%;
+  /* 縦の高さを100% */ }
+
+body {
+  color: #4c4c4c;
+  font-size: 1.4rem;
+  font-family: "游ゴシック", YuGothic, "メイリオ", Verdana, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+  line-height: 1.6;
+  letter-spacing: 0.1em;
+  background-color: #fff;
+  height: 100%;
+  /* 縦の高さを100% */ }
+
+a {
+  color: #14c0c9;
+  text-decoration: none; }
+  a:visited {
+    color: #0f949b; }
+  a:hover {
+    color: #0f949b; }
+  a:active {
+    color: #16d6e0; }
+  a:hover {
+    text-decoration: underline; }
+
+/* Align
+------------------------------------------------------------*/
+.text-center {
+  text-align: center; }
+
+.text-middle {
+  vertical-align: middle; }
+
+/* Layout
+------------------------------------------------------------*/
+.block-center, section .container {
+  display: block;
+  margin-left: auto;
+  margin-right: auto; }
+
+/* Font
+------------------------------------------------------------*/
+.abel, section h2 {
+  font-family: 'Abel', sans-serif; }
+
+.uppercase, section h2 {
+  text-transform: uppercase; }
+
+/* トップ写真
+ /* Header
+------------------------------------------------------------*/
+header p.resizeimage img {
+  width: 100vw;
+  height: 300px; }
+
+/* Contents
+------------------------------------------------------------*/
+section {
+  padding: 30px 0; }
+  section .container {
+    width: 90%; }
+  section h2 {
+    font-size: 3.2rem; }
+
+#TOPBOX {
+  background-color: #fff; }
+  #TOPBOX .container {
+    display: -webkit-flex;
+    display: flex;
+    justify-content: space-between;
+    -webkit-flex-direction: column;
+    flex-direction: column; }
+  #TOPBOX h2 {
+    color: #4c4c4c;
+    margin-bottom: 30px; }
+  #TOPBOX .topbox-box {
+    border: 1px solid blue;
+    background-color: #cecece;
+    position: relative;
+    -webkit-flex: 1;
+    flex: 1;
+    margin: 10px 0;
+    padding: 20px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box; }
+    #TOPBOX .topbox-box .box-title {
+      position: absolute;
+      display: block;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 30px;
+      background-color: red;
+      box-align: center;
+      padding-top: 5px; }
+    #TOPBOX .topbox-box .box-inner-text {
+      display: block;
+      width: 100%;
+      padding-top: 30px;
+      background-color: #cecece; }
+
+#SECONDBOX {
+  width: 80%;
+  margin: 0 auto;
+  overflow: hidden;
+  *zoom: 1; }
+  #SECONDBOX ul {
+    text-align: center; }
+    #SECONDBOX ul li {
+      border: 1px solid blue;
+      display: inline-block;
+      height: 200px;
+      margin: 5px auto; }
+      #SECONDBOX ul li .box-title {
+        display: block;
+        background-color: blue;
+        width: 200px;
+        height: 30px;
+        padding-top: 5px;
+        color: #fff; }
+      #SECONDBOX ul li .box-content {
+        display: block;
+        padding-top: 15px; }
+
+footer {
+  background-color: #cecece;
+  height: 80px;
+  width: 100%;
+  padding-top: 30px; }
+  footer #footersection {
+    position: fixed;
+    right: 0px;
+    bottom: 0px; }
+
+.button {
+  margin: auto;
+  height: 30px;
+  width: 200px;
+  display: block;
+  background-color: blue;
+  padding-top: 5px;
+  color: white;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px; }
+
+@media (min-width: 1025px) {
+  #TOPBOX {
+    background-color: #fff; }
+    #TOPBOX .container {
+      display: -webkit-flex;
+      display: flex;
+      justify-content: space-between;
+      flex-direction: row; }
+    #TOPBOX .topbox-box {
+      -webkit-flex: 1;
+      flex: 1;
+      margin: 0px 10px;
+      padding: 20px;
+      -moz-border-radius: 4px;
+      -webkit-border-radius: 4px;
+      border-radius: 4px;
+      -moz-box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box; } }
+
+/*# sourceMappingURL=style.css.map */

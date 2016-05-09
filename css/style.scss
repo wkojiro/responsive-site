@@ -1,0 +1,234 @@
+@import "compass";
+@import url(https://fonts.googleapis.com/css?family=Abel);
+// font-family
+$baseFontFamily :"游ゴシック", YuGothic, "メイリオ",Verdana, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+
+// colors
+// $baseColor: #fdfcf6;
+// $subColor: #bea300;
+
+$baseColor: #fff;
+$subColor: #fff;
+
+$keyColor: #14c0c9;
+$fontColor: #4c4c4c;
+
+
+/* Base
+------------------------------------------------------------*/
+html{ font-size: 62.5%; 
+  height: 100%;	/* 縦の高さを100% */
+  
+}
+
+body{
+  color: $fontColor;
+  font-size: 1.4rem;
+  font-family:$baseFontFamily;
+  line-height:1.6;
+  letter-spacing: 0.1em; 
+  background-color: $baseColor;
+  height: 100%;	/* 縦の高さを100% */
+}
+
+a {
+  @include link-colors($keyColor, darken($keyColor, 10%), lighten($keyColor, 5%), darken($keyColor, 10%));
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+/* Align
+------------------------------------------------------------*/
+.text-center {
+  text-align: center;
+}
+.text-middle {
+    vertical-align: middle;
+}
+/* Layout
+------------------------------------------------------------*/
+.block-center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Font
+------------------------------------------------------------*/
+.abel {
+  font-family: 'Abel', sans-serif;
+}
+.uppercase {
+  text-transform: uppercase;
+}
+
+/* トップ写真
+ /* Header
+------------------------------------------------------------*/
+
+header {
+ p.resizeimage img { width: 100vw; height: 300px; }  
+}
+
+
+
+/* Contents
+------------------------------------------------------------*/
+// Common Styles
+section {
+  padding: 30px 0;
+  .container {
+    width: 90%;
+    @extend .block-center;
+  }
+  h2 {
+    @extend .abel;
+    font-size: 3.2rem;
+    @extend .uppercase;
+  }
+}
+
+// Topbox
+#TOPBOX {
+  background-color: $baseColor;
+
+  .container {
+    @include display-flex;
+    justify-content: space-between;
+    @include flex-direction(column); // スキルボックスを縦に並べる
+  }
+  h2 {
+    color: $fontColor; 
+    margin-bottom: 30px;
+  } 
+  .topbox-box {
+    border: 1px solid blue; 
+    background-color: #cecece;
+    position:relative;
+    @include flex(1);
+    margin: 10px 0;                     // 上下にマージン
+    padding: 20px;
+    @include border-radius(4px);
+    @include box-sizing(border-box);
+    
+        .box-title{
+            // border: 1px solid blue;
+        position:absolute;
+        display: block;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 30px; // %で指定すると横を広げるとタイトルが本文を覆ってしまう。min-hightとしてもよいかも。 
+        background-color: red;
+        box-align: center;
+        padding-top: 5px;// %で指定すると横を広げるとタイトルが本文を覆ってしまう。
+        // padding-top: 10% ;
+    }
+    .box-inner-text{
+            // border: 1px solid blue;        
+        display: block;        
+        // position: absolute;
+        // top: 35px;
+        // left: 0 ;
+        width: 100%;
+        // height: 150px;
+        padding-top: 30px;
+        background-color: #cecece;
+    }
+  }
+  
+}
+
+
+// second box
+
+
+#SECONDBOX {
+	width: 80%;
+	margin: 0 auto;
+
+   	
+	@include clearfix;
+	ul {text-align: center;
+    li {
+      border: 1px solid blue;
+    	display:inline-block;
+      height: 200px;
+      margin: 5px auto;
+    	.box-title{
+    	  display:block;
+    	  background-color:blue;
+    	  width: 200px;
+    	  height: 30px;
+    	  padding-top: 5px;
+    	  color: #fff;
+    	}
+    	.box-content{
+    	  display: block;
+    	  padding-top: 15px;
+    	 // background-color: #cecece;
+    	}
+    }
+	} 
+}
+
+
+
+
+
+footer{
+    background-color: #cecece;  
+    height: 80px;  
+    width: 100%;	
+    padding-top: 30px;  
+     #footersection{
+     position: fixed; 
+     right: 0px;
+     bottom: 0px;
+
+
+    // padding-top: 50px;
+ }
+}
+
+.button{
+        margin: auto;
+         height: 30px;
+         width: 200px;
+         display: block;
+         background-color: blue;
+         padding-top:5px;
+         color: white;
+         @include border-radius(5px);
+ }
+
+// desktop
+@media (min-width: 1025px) {
+
+
+#TOPBOX {
+  background-color: $subColor;
+  .container {
+    @include display-flex;
+    justify-content: space-between;
+    flex-direction: row;
+  }
+  .topbox-box {
+    // border: 10px solid blue;
+    @include flex(1);
+    margin: 0px 10px;                     // 上下にマージン
+    padding: 20px;
+
+    @include border-radius(4px);
+    @include box-sizing(border-box);
+  }
+}
+
+
+
+
+
+
+}
